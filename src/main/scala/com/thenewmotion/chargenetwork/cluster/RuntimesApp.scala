@@ -32,7 +32,7 @@ class RuntimesSupervisor extends Actor with ActorLogging {
       gateways = gateways + node
       notifyGateway(node)
 
-    case MemberRemoved(node) if node.isGateway =>
+    case MemberRemoved(node, _) if node.isGateway =>
       gateways = gateways - node
 
     case req@StatusAvailableReq(chargerId) =>

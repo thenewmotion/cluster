@@ -14,7 +14,7 @@ class ClusterLogger extends Actor with ActorLogging {
       log.info("Member is Up: {}", member)
     case UnreachableMember(member) =>
       log.info("Member detected as unreachable: {}", member)
-    case MemberRemoved(member) =>
+    case MemberRemoved(member, _) =>
       log.info("Member is Removed: {}", member)
 //    case event: ClusterDomainEvent =>
 //      log.info(event.toString)

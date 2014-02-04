@@ -49,7 +49,7 @@ class GatewayActor extends Actor with ActorLogging {
         }
       }
 
-    case MemberRemoved(node) if node.isRuntimes =>
+    case MemberRemoved(node, _) if node.isRuntimes =>
       runtimesNodes = runtimesNodes - node
       runtimes = runtimes.filterNot {
         case (chargerId, actor) => actor.path.address == node.address

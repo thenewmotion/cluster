@@ -11,7 +11,7 @@
     <artifactId>cluster</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <akka.version>2.2-M3</akka.version>
+        <akka.version>2.2.3</akka.version>
     </properties>
     <dependencies>
         <dependency>
@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-cluster-experimental_${scala.version}</artifactId>
+            <artifactId>akka-cluster_${scala.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
         <dependency>
